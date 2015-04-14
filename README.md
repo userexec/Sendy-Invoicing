@@ -33,12 +33,16 @@ Installing this add-on is as easy as cloning this repository into the right plac
     
 4. make install_invoicing.sh executable
 
-    ```chmod +x install_invoicing.sh```
+    ```
+    chmod +x install_invoicing.sh
+    ```
     
     
 5. run the install script
 
-    ```./install_invoicing.sh```
+    ```
+    ./install_invoicing.sh
+    ```
 
 
 ## Configuration
