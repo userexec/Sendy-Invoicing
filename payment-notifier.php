@@ -97,9 +97,6 @@
 	function sendMail ($args) {
 		$mail = new PHPMailer();
 
-	  /*$payee_name			= Set at top
-		$payee_email		= Set at top
-		$server_email		= Set at top*/
 		$campaign_name		= $_POST['campaign'];
 		$name 				= $_POST['name'];
 		$department			= $_POST['department'];

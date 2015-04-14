@@ -9,7 +9,7 @@
 	 * then stored in the database and hashed with the campaign name
 	 * into a variable. When the invoice is printed, an AJAX request then 
 	 * sends the hash and invoice information to payment-notifier.php, which 
-	 * checks which user it determines is logged in, retrieves currently
+	 * should have received the current campaign name, retrieves currently
 	 * available security tokens, and hashes each to check for a match to the
 	 * received hash. If a match is found, it removes the used token from the
 	 * database and sends the invoice details to the payee. If no match is
