@@ -2,7 +2,7 @@
 
 Invoicing add-on for Sendy email server - Bill brands via invoice
 
-!(Sendy Invoicing Add-on)[https://cloud.githubusercontent.com/assets/5970137/7149270/f9aceb88-e2d0-11e4-8846-2c42139fa4a4.png]
+![Sendy Invoicing Add-on](https://cloud.githubusercontent.com/assets/5970137/7149270/f9aceb88-e2d0-11e4-8846-2c42139fa4a4.png)
 
 If your department or company can only do internal transactions via invoice or you need an alternative to PayPal, this simple, unofficial add-on provides customizable invoicing on a brand-by-brand basis.
 
@@ -51,7 +51,7 @@ Once you have installed the Sendy Invoicing add-on, you will need to configure t
 
 Once the Sendy Invoicing add-on is in place, a "Charge via invoicing" checkbox will appear under the campaign fee settings on each brand. Check the box to enable invoicing for the brand.
 
-!(Edit Brand Page)[https://cloud.githubusercontent.com/assets/5970137/7149272/f9ad4ae2-e2d0-11e4-9931-8cc32c807818.png]
+![Edit Brand Page](https://cloud.githubusercontent.com/assets/5970137/7149272/f9ad4ae2-e2d0-11e4-9931-8cc32c807818.png)
 
 Please note that invoicing is activated on a brand-by-brand basis, so some brands can be billed via PayPal while others receive invoices.
 
@@ -59,15 +59,15 @@ Please note that invoicing is activated on a brand-by-brand basis, so some brand
 
 When brands using invoicing press the "Proceed to pay for campaign" or "Schedule and pay for campaign" buttons, they will be taken to an invoice page with details about their campaign and the applicable charges. After reviewing the invoice, they may choose "Accept charges and print invoice" or "Cancel."
 
-!(User Invoice)[https://cloud.githubusercontent.com/assets/5970137/7149270/f9aceb88-e2d0-11e4-8846-2c42139fa4a4.png]
+![User Invoice](https://cloud.githubusercontent.com/assets/5970137/7149270/f9aceb88-e2d0-11e4-8846-2c42139fa4a4.png)
 
 Upon accepting the invoice, the browser's print function is automatically called and a print preview is shown.
 
-!(Print Invoice)[https://cloud.githubusercontent.com/assets/5970137/7149269/f9ace0d4-e2d0-11e4-99d7-42e0e7ed7a2a.png]
+![Print Invoice](https://cloud.githubusercontent.com/assets/5970137/7149269/f9ace0d4-e2d0-11e4-99d7-42e0e7ed7a2a.png)
 
 If printing fails, the users has the opportunity to print again as many times as they need before sending the campaign.
 
-!(Print Again)[https://cloud.githubusercontent.com/assets/5970137/7149271/f9ad3e12-e2d0-11e4-81c0-ac727252dc6c.png]
+![Print Again](https://cloud.githubusercontent.com/assets/5970137/7149271/f9ad3e12-e2d0-11e4-81c0-ac727252dc6c.png)
 
 Once a printed invoice is obtained, users may press "Send or schedule campaign" to complete the workflow.
 
@@ -75,7 +75,7 @@ Once a printed invoice is obtained, users may press "Send or schedule campaign" 
 
 Whenever a user presses the "Accept charges and print invoice" button, a record of the invoice is automatically emailed to you using the details specified in Sendy-Invoicing/config.php. This copy is for your billing and record-keeping use and contains all pertinent information found in the user's printed invoice.
 
-!(Invoice Record)[https://cloud.githubusercontent.com/assets/5970137/7149273/f9aefffe-e2d0-11e4-8605-2fd521923280.png]
+![Invoice Record](https://cloud.githubusercontent.com/assets/5970137/7149273/f9aefffe-e2d0-11e4-8605-2fd521923280.png)
 
 ## Removal
 
