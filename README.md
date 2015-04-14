@@ -75,7 +75,7 @@ Upon accepting the invoice, the browser's print function is automatically called
 
 ![Print Invoice](https://cloud.githubusercontent.com/assets/5970137/7149269/f9ace0d4-e2d0-11e4-99d7-42e0e7ed7a2a.png)
 
-If printing fails, the users has the opportunity to print again as many times as they need before sending the campaign.
+If printing fails, the user has the opportunity to print again as many times as they need before sending the campaign.
 
 ![Print Again](https://cloud.githubusercontent.com/assets/5970137/7149271/f9ad3e12-e2d0-11e4-81c0-ac727252dc6c.png)
 
