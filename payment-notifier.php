@@ -162,7 +162,7 @@
 		$mail->Password 	= $args['smtp_password'];
 
 		$mail->CharSet 		= "UTF-8";
-		$mail->From 		= $server_email;
+		$mail->From 		= $args['server_email'];
 		$mail->FromName 	= 'Sendy Invoicing';
 		$mail->Subject 		= 'New Sendy Invoice - ' . $campaign_name;
 		$mail->AltBody 		= $messageAlt;
