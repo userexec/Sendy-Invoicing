@@ -18,17 +18,23 @@ Installing this add-on is as easy as cloning this repository into the right plac
 
 1. cd into your sendy/includes directory (this may be a different path on your server)
 
-    ```cd /var/www/html/sendy/includes/```
+    ```
+    cd /var/www/html/sendy/includes/
+    ```
 
 
 2. clone this repository
 
-    ```git clone https://github.com/userexec/Sendy-Invoicing.git```
+    ```
+    git clone https://github.com/userexec/Sendy-Invoicing.git
+    ```
     
     
 3. cd into the new directory
 
-    ```cd Sendy-Invoicing```
+    ```
+    cd Sendy-Invoicing
+    ```
     
     
 4. make install_invoicing.sh executable
