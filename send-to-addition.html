@@ -1,0 +1,49 @@
+				<!--
+				SENDY INVOICING - SEND-TO-ADDITION
+
+				The contents of this file should be pasted into send-to.php. Look for the
+				section around lines 158-161 that look like this:
+
+					php if(paid()):
+						<form action="php echo get_app_info('path')...
+					php else:
+						<form action="php echo get_app_info('path')...
+
+				The contents of this file should appear immediately after the form and
+				before the php endif;.
+				-->
+				<script>
+					/*global $*/
+					// CHECK CURRENT INVOICING SELECTION
+					function checkInvoicing() {
+						'use strict';
+						$.ajax({
+							url: 	'<?php echo get_app_info("path")?>/includes/Sendy-Invoicing/check-invoicing.php',
+							type: 	'POST',
+							cache: 	false,
+							data: 	'i=<?php echo $_GET["i"];?>',
+							success: function(result) {
+								if (result == 1) {
+									$('#pay-form, #schedule-form').attr('action', '<?php echo get_app_info("path")?>/includes/Sendy-Invoicing/invoicing.php');
+								}
+							}
+						});
+					}
+					checkInvoicing();
+
+					$(document).ready(function() {
+						'use strict';
+
+						// Remove duplicate total_recipients2 inputs
+						$('input[name="total_recipients2"]:first').addClass('preserve');
+						$('input[name="total_recipients2"]').not('.preserve').remove();
+
+						// Place initial value into total_recipients2
+						$('input[name="total_recipients2"]').val($('#recipients').text());
+
+						// Update total_recipients2 value whenever #recipients changes
+						$('#recipients').on('DOMSubtreeModified', function() {
+							$('input[name="total_recipients2"]').val($('#recipients').text());
+						});
+					});
+				</script>

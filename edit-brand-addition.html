@@ -1,0 +1,63 @@
+		<!--
+		SENDY INVOICING - EDIT-BRAND-ADDITION
+
+		The contents of this file should be pasted into edit-brand.php. Look for the
+		section around line 397 that looks like this:
+
+		<label class="control-label" for="cost_per_recipient">php echo _('Cost per recipient');</label>
+		<div class="control-group">
+			<div class="controls">
+				<div class="input-prepend input-append">
+					<span class="add-on">php echo $currency_symbol;</span><input type="text" class="input-xlarge" id="cost_per_recipient" name="cost_per_recipient" placeholder="Eg. .01" value="php echo get_saved_data('cost_per_recipient');" style="width: 80px;">
+				</div>
+			</div>
+		</div>
+
+		The contents of this file should appear immediately AFTER the aforementioned
+		block of code.
+		-->
+    	<div class="control-group checkbox" style="margin-top: 1rem;">
+			<label class="control-label" onclick="toggleInvoicing()">
+				<input id="invoicing" type="checkbox"> <?php echo _('Charge via invoicing');?>
+			</label>
+		</div>
+		<script>
+			/*global $*/
+
+			// CHECK CURRENT INVOICING SELECTION
+			function checkInvoicing() {
+				'use strict';
+				$.ajax({
+					url: 	'<?php echo get_app_info("path")?>/includes/Sendy-Invoicing/check-invoicing.php',
+					type: 	'POST',
+					cache: 	false,
+					data: 	'i=<?php echo $_GET["i"];?>',
+					success: function(result) {
+						if (result == 1) {
+							$('#invoicing').prop('checked', true);
+						} else {
+							$('#invoicing').prop('checked', false);
+						}
+					},
+					error: function() {
+						$('#invoicing').prop('checked', false);
+					}
+				});
+			}
+			checkInvoicing();
+
+			// TOGGLE INVOICING IN DATABASE
+			function toggleInvoicing() {
+				'use strict';
+				$.ajax({
+					url: 	'<?php echo get_app_info("path")?>/includes/Sendy-Invoicing/toggle-invoicing.php',
+					type: 	'POST',
+					cache: 	false,
+					data: 	'i=<?php echo $_GET["i"];?>',
+					success: function() {
+						checkInvoicing();
+					}
+				});
+			}
+		</script>
+
