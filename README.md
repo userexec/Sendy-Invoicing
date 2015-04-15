@@ -1,6 +1,6 @@
 # Sendy-Invoicing
 
-Invoicing add-on for Sendy email server - Bill brands via invoice
+Invoicing add-on for [Sendy](http://sendy.co) email server - Bill brands via invoice
 
 ![Sendy Invoicing Add-on](https://cloud.githubusercontent.com/assets/5970137/7149270/f9aceb88-e2d0-11e4-8846-2c42139fa4a4.png)
 
