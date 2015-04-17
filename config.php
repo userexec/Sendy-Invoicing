@@ -15,6 +15,7 @@
 	 */
 
 	$email_notification = array(
+		'api_key'			=> '00000000000000000000'	// Your Sendy API key
 		'payee_name' 		=> 'John Smith',			// Who receives new invoice notifications?
 		'payee_email'		=> 'jsmith@sample.com',		// What is his or her email address?
 		'server_email'		=> 'sendy@sample.com',		// The From: field for the notifications

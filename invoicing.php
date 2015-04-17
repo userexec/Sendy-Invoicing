@@ -425,12 +425,12 @@
 					url: 'payment-notifier.php',
 					type: 'POST',
 					cache: false,
-					data: 	'api_key=tSWxElhzn2aDgU0Iy3qp' + 
+					data: 	'api_key=<?php echo $api_key; ?>' + 
 							'&token=<?php echo $hash; ?>' +
 							'&verify=<?php echo md5($hash . $delivery_fee . $cost_per_recipient . $total); ?>' +
 							'&campaign=<?php echo $campaign; ?>' +
-							'&name=<?php echo $name; ?>' +
-							'&department=<?php echo $department; ?>' +
+							'&name=<?php echo urlencode($name); ?>' +
+							'&department=<?php echo urlencode($department); ?>' +
 							'&send_date=<?php echo $send_date; ?>' +
 							'&total_recipients=<?php echo $total_recipients; ?>' +
 							'&delivery_fee=<?php echo $delivery_fee; ?>' +
