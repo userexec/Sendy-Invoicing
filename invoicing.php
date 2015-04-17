@@ -425,7 +425,7 @@
 					url: 'payment-notifier.php',
 					type: 'POST',
 					cache: false,
-					data: 	'api_key=<?php echo $api_key; ?>' + 
+					data: 	'api_key=<?php echo email_notification["api_key"]; ?>' + 
 							'&token=<?php echo $hash; ?>' +
 							'&verify=<?php echo md5($hash . $delivery_fee . $cost_per_recipient . $total); ?>' +
 							'&campaign=<?php echo $campaign; ?>' +
