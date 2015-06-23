@@ -1,0 +1,24 @@
+		<!--
+		SENDY INVOICING - NEW-BRAND-ADDITION
+
+		The contents of this file should be pasted into new-brand.php. Look for the
+		section around line 298 that looks like this:
+
+		<label class="control-label" for="cost_per_recipient">php echo _('Cost per recipient');</label>
+		<div class="control-group">
+			<div class="controls">
+				<div class="input-prepend input-append">
+					<span class="add-on">$</span><input type="text" class="input-xlarge" id="-cost_per_recipient" name="cost_per_recipient" placeholder="Eg. .01" style="width: 80px;">
+				</div>
+			</div>
+		</div>
+
+		The contents of this file should appear immediately AFTER the aforementioned
+		block of code.
+		-->
+    	<div class="control-group checkbox" style="margin-top: 1rem; padding-left: 0px;">
+			<label class="control-label" style="color: darkred;">
+				<?php echo _('Invoicing can only be activated for a brand once it has been created. Please create this brand and then edit it to activate invoicing.');?>
+			</label>
+		</div>
+
