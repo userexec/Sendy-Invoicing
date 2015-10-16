@@ -87,6 +87,10 @@ Whenever a user presses the "Accept charges and print invoice" button, a record 
 
 ![Invoice Record](https://cloud.githubusercontent.com/assets/5970137/7149273/f9aefffe-e2d0-11e4-8605-2fd521923280.png)
 
+## Invoices for the admin account
+
+With a normal install of this add-on the administrator account is allowed to send from any brand without going through invoicing. If you would like the administrator account to be able to view and print the invoice that would be generated for a brand when sending an email, follow the instructions in `admin-invoice-preview-addition.html`. Adding this code block to `send-to.php` will cause a "Generate invoice" button to appear for the admin above the send button for campaigns. This is particularly useful if the admin account is used to periodically create and send emails on the behalf of some brands.
+
 ## Removal
 
 Removing the Sendy Invoicing add-on is as simple as deleting the Sendy-Invoicing folder from your sendy/includes directory and removing the three blocks of code it placed in sendy/send-to.php, sendy/new-brand.php, and sendy/edit-brand.php. The blocks of code that were inserted can be found, in full, in send-to-addition.html, new-brand-addition.html, and edit-brand-addition.html.
