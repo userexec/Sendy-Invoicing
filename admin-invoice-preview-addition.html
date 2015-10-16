@@ -1,0 +1,61 @@
+<!--
+SENDY INVOICING - ADMINISTRATOR INVOICE PREVIEW ADD-ON
+
+This is an optional modification that is not included in the install.
+Inserting this block gives the administrator account a "Generate invoice"
+button on the send screen and interrupts the send with an alert box
+once if the invoice button has not been clicked.
+
+This modification is not included in the install because it interrupts
+user experience and does not serve a purpose in most Sendy installs.
+You may wish to add this if your administrator account is used for
+sending emails on other brands' behalf.
+
+The contents of this file should be pasted into send-to.php. Look for the
+section around lines 443-444 that look like this:
+
+	<input type="hidden" id="aws_keys_available" value="...
+	<button type="submit" class="btn btn-inverse btn-large"...
+
+The contents of this file should appear immediately after the input and
+before the button.
+-->
+<script>
+	var invoicePreviewed = false;
+
+	function previewInvoice() {
+		var invoicePreviewed = true;
+
+		var cid = $('input[name="cid"]').val();
+		var uid = $('input[name="uid"]').val();
+		var recipients = parseInt($('#recipients').html());
+		var send_date = $('#schedule-form-wrapper').css('display') === 'none' ? false : $('input[name="send_date"]').val();
+
+		if (recipients === 0) {
+			alert('No recipients selected! Please ensure you have chosen your recipient lists.');
+			return false;
+		}
+
+		var url = '<?php echo get_app_info('path')?>/includes/Sendy-Invoicing/invoicing-preview.php?'
+		url += 'cid=' + cid + '&';
+		url += 'uid=' + uid + '&';
+		url += 'recipients=' + recipients + '&';
+		url += 'date=' + send_date;
+
+		window.open(url);
+	}
+	$(document).ready(function() {
+		$('button#real-btn').click(function(event) {
+			if (!invoicePreviewed) {
+				event.preventDefault();
+				alert('Wait! Do you need an invoice for this send? The "Generate invoice" button has not been clicked. If you do not need an invoice, just click send again.');
+				invoicePreviewed = true;
+			}
+		});
+	})
+</script>
+
+<button class="btn btn-large" id="preview-invoice" style="margin-bottom: 10px;" onclick="previewInvoice(); return false;"><i class="fa icon-credit-card"></i>&nbsp;&nbsp;Generate invoice</button><br>
+<!--
+SENDY INVOICING - END BLOCK
+-->
